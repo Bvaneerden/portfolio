@@ -5,13 +5,14 @@ import Wheel from './Wheel.js';
 function Home() {
   return (
     <div>
+      <h2>Software Engineer / Full Stack Developer / Osteopath</h2>
        <img src={images.profilepic} alt="" />
       {/* <Wheel></Wheel> */}
     </div>
   )
 }
 
-export default Home;
+export default Home
 
 
 // function Home() {

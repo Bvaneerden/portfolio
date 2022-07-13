@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+
+/* div .navbar {
+  background-color: rgba(15, 80, 120, 0.916)!important;
+} */
+
+/* :root {
+  --bs-dark-rgb: 15,80,120;
+} */
+
+:root {
+  --bs-dark-rgb: 39,76,111;
+}
+
+body {
+  background-color: rgba(157, 199, 232, 0.916)
+}
+
+.skills {
+  max-width: 50px
+}
+
+.carousel {
+  text-align: center;
+  max-width: 80%;
+}
+
+.carousel-inner {
+  max-width: 90%;
+  color: black;
+
+}
+
+.btn-outline-dark {
+  border-color: rgba(15, 80, 120, 0.916);
+  color: rgba(15, 80, 120, 0.916);
+
+
+}
+
+.btn-outline-dark:hover {
+  background-color: rgba(15, 80, 120, 0.916);
+  color: white
+}
