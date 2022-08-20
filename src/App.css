@@ -13,6 +13,10 @@
   }
 }
 
+.hidden {
+  
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -53,29 +57,91 @@ body {
   background-color: rgba(157, 199, 232, 0.916)
 }
 
+.skillspage{
+  max-width: 100%;
+}
+
+.skillsBoxAll{
+  /* border: 1px solid rgb(243, 32, 32); */
+  display: flex;
+  justify-content: space-evenly
+}
+
+.skillsBoxItem{
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 55px;
+}
+
 .skills {
   max-width: 50px
 }
 
+.skillsName {
+  /* border: 1px solid black; */
+  /* display: flex;
+  align-self: center */
+}
+
+
 .carousel {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
   max-width: 80%;
 }
 
 .carousel-inner {
-  max-width: 90%;
+  /* max-width: 90%; */
   color: black;
 
 }
 
 .btn-outline-dark {
+  background-color: rgba(15, 80, 120, 0.916);;
   border-color: rgba(15, 80, 120, 0.916);
-  color: rgba(15, 80, 120, 0.916);
-
-
-}
-
-.btn-outline-dark:hover {
-  background-color: rgba(15, 80, 120, 0.916);
   color: white
 }
+
+.btn-outline-dark:active {
+  background-color: rgba(15, 80, 120, 0.916);;
+  border-color: rgba(15, 80, 120, 0.916);
+  color: white
+}
+.btn-outline-dark:link {
+  background-color: rgba(15, 80, 120, 0.916);;
+  border-color: rgba(15, 80, 120, 0.916);
+  color: white
+}
+.btn-outline-dark:focus {
+  background-color: rgba(15, 80, 120, 0.916);;
+  border-color: rgba(15, 80, 120, 0.916);
+  color: white
+}
+.btn-outline-dark:visited {
+  background-color: rgba(15, 80, 120, 0.916);;
+  border-color: rgba(15, 80, 120, 0.916);
+  color: white
+}
+/* .btn-outline-dark {
+  border-color: rgba(15, 80, 120, 0.916);
+  color: rgba(15, 80, 120, 0.916);
+} */
+
+.btn-outline-dark:hover {
+  background-color: rgba(51, 122, 176, 0.916);
+  color: white
+  /* color: rgba(15, 80, 120, 0.916); */
+}
+
+
+
+/* .Wheel { */
+  /* background-image: url("./images/profilepic.png"); */
+  /* background-size: cover; */
+  /* image-orientation: fixed !important;
+  transform: translate(-50%, -50%) rotate(0) !important; */
+/* } */

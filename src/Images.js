@@ -3,7 +3,7 @@ import github from './images/github.png'
 import linkedin from './images/linkedin.png'
 import location from './images/location.png'
 import phone from './images/phone.jpeg'
-import profilepic from './images/profilepic.png'
+import profilepic from './images/profile_pic.png'
 
 import HTML5 from './images/html5-logo.png'
 import css from './images/css.png'
@@ -28,37 +28,150 @@ import CodingResources from './images/CodingResources.png'
 
 
 
-
 const images = {
-  HTML5,
-  css,
-  javascript,
-  ruby,
-  rubydark,
-  ruby_on_rails,
-  postgresql,
-  python,
-  bootstrap,
-  node,
-  sinatra,
-  typescript,
-  react,
-  reactdark,
-  mySQL,
-  heroku,
-  CodingResources,
-  TicTacToe,
-  JobsTrackerApp,
-  email,
-  github,
-  linkedin,
-  location,
-  phone,
-  profilepic
-}
-const imageNames = Object.keys(images)
+  skills: [
+    {
+      title: "HTML5",
+      image: HTML5
+    },
+    {
+      title: "css",
+      image: css
+    },
+    {
+      title: "javascript",
+      image: javascript
+    },
+    {
+      title: "bootstrap",
+      image: bootstrap
+    },
+    {
+      title: "node",
+      image: node
+    },
+    {
+      title: "ruby",
+      image: ruby
+    },
+    {
+      title: "sinatra",
+      image: sinatra
+    },
+    {
+      title: "mySQL",
+      image: mySQL
+    },
+    {
+      title: "postgresql",
+      image: postgresql
+    },
+    {
+      title: "react",
+      image: react
+    },
+    {
+      title: "github",
+      image: github
+    },
+    {
+      title: "heroku",
+      image: heroku
+    }],
+    skillsYetToAdd: [
 
-export { images, imageNames }
+    {
+      title: "rubydark",
+      image: rubydark
+    },
+    {
+      title: "ruby_on_rails",
+      image: ruby_on_rails
+    },
+    {
+      title: "python",
+      image: python
+    },
+    {
+      title: "typescript",
+      image: typescript
+    },
+    {
+      title: "reactdark",
+      image: reactdark
+    },
+
+  ],
+    other: [
+      {
+        title: "CodingResources",
+        image: CodingResources
+      },
+      {
+        title: "TicTacToe",
+        image: TicTacToe
+      },
+      {
+        title: "JobsTrackerApp",
+        image: JobsTrackerApp
+      },
+      {
+        title: "email",
+        image: email
+      },
+      {
+        title: "github",
+        image: github
+      },
+      {
+        title: "linkedin",
+        image: linkedin
+      },
+      {
+        title: "location",
+        image: location
+      },
+      {
+        title: "phone",
+        image: phone
+      },
+      {
+        title: "profilepic",
+        image: profilepic
+      },
+    ]
+
+}
+
+// const images = {
+//   HTML5,
+//   css,
+//   javascript,
+//   ruby,
+//   rubydark,
+//   ruby_on_rails,
+//   postgresql,
+//   python,
+//   bootstrap,
+//   node,
+//   sinatra,
+//   typescript,
+//   react,
+//   reactdark,
+//   mySQL,
+//   heroku,
+//   CodingResources,
+//   TicTacToe,
+//   JobsTrackerApp,
+//   email,
+//   github,
+//   linkedin,
+//   location,
+//   phone,
+//   profilepic
+// }
+
+export { images }
 
 
 

@@ -5,8 +5,10 @@ import Wheel from './Wheel.js';
 function Home() {
   return (
     <div>
+      <h1 className='hidden'>About me</h1>
       <h2>Software Engineer / Full Stack Developer / Osteopath</h2>
-       <img src={images.profilepic} alt="" />
+       <img src={images.other[8].image} alt="" />
+       
       {/* <Wheel></Wheel> */}
     </div>
   )

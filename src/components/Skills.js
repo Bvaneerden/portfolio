@@ -1,23 +1,36 @@
 import { images, imageNames } from '../Images'
+import Wheel from './Wheel'
 
 function Skills() {
 
   return (
-    <div>
+    <div className="skillspage">
       <h1>Skills</h1>
 
+      {/* <Wheel></Wheel> */}
+      <div className="skillsBoxAll">
 
-      <img className="skills" src={images.HTML5} alt="" />
-      <img className="skills" src={images.css} alt="" />
-      <img className="skills" src={images.javascript} alt="" />
-      <img className="skills" src={images.ruby} alt="" />
-      <img className="skills" src={images.postgresql} alt="" />
-      <img className="skills" src={images.bootstrap} alt="" />
-      <img className="skills" src={images.node} alt="" />
-      <img className="skills" src={images.sinatra} alt="" />
-      <img className="skills" src={images.react} alt="" />
-      <img className="skills" src={images.github} alt="" />
-      <img className="skills" src={images.mySQL} alt="" />
+      {images.skills.map((skill, i) =>
+      <div className="skillsBoxItem">
+      <img key={i} className="skills" src={skill.image} />
+      <p className="skillsName">{skill.title}</p>
+      </div>
+          )}
+          </div>
+       
+
+      {/* <img className="skills" src={images.skills[0].image} alt="HTML5" />
+      <img className="skills" src={images.skills[1].image} alt="CSS" />
+      <img className="skills" src={images.skills[2].image} alt="JavaScript" />
+      <img className="skills" src={images.skills[3].image} alt="bootstrap" />
+      <img className="skills" src={images.skills[4].image} alt="node" />
+      <img className="skills" src={images.skills[5].image} alt="ruby" />
+      <img className="skills" src={images.skills[6].image} alt="sinatra" />
+      <img className="skills" src={images.skills[7].image} alt="mySQL" />
+      <img className="skills" src={images.skills[8].image} alt="postgresql" />
+      <img className="skills" src={images.skills[9].image} alt="react" />
+      <img className="skills" src={images.skills[10].image} alt="github" />
+       */}
 
 
     </div>

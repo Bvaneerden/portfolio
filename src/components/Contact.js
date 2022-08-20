@@ -1,4 +1,3 @@
-import { images, imageNames } from '../Images'
 import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 

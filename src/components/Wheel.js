@@ -13,7 +13,7 @@ class Wheel extends React.Component {
             theta: 0.0,
             snap_point: { x: null, y: null },
             snap_in_progress: false,
-            children_loaded: 0,
+            children_loaded: 10,
             loaded: false
         }
 
@@ -27,14 +27,15 @@ class Wheel extends React.Component {
             y: parseFloat(this.wheel.style.height) / 2
         }
         let temp_cards = [
-        <Card radius={this.state.radius} theta={(Math.PI / 4) * 0} center={center_of_wheel} key={`card_${0}`} pic={images.HTML5} amLoaded={this.children_loaded} />,
-        <Card radius={this.state.radius} theta={(Math.PI / 4) * 1} center={center_of_wheel} key={`card_${1}`} pic={`https://picsum.photos/500/500`} amLoaded={this.children_loaded} />,
-        <Card radius={this.state.radius} theta={(Math.PI / 4) * 2} center={center_of_wheel} key={`card_${2}`} pic={`https://picsum.photos/500/500`} amLoaded={this.children_loaded} />,
-        <Card radius={this.state.radius} theta={(Math.PI / 4) * 3} center={center_of_wheel} key={`card_${3}`} pic={`https://picsum.photos/500/500`} amLoaded={this.children_loaded} />,
-        <Card radius={this.state.radius} theta={(Math.PI / 4) * 4} center={center_of_wheel} key={`card_${4}`} pic={`https://picsum.photos/500/500`} amLoaded={this.children_loaded} />,
-        <Card radius={this.state.radius} theta={(Math.PI / 4) * 5} center={center_of_wheel} key={`card_${5}`} pic={`https://picsum.photos/500/500`} amLoaded={this.children_loaded} />,
-        <Card radius={this.state.radius} theta={(Math.PI / 4) * 6} center={center_of_wheel} key={`card_${6}`} pic={`https://picsum.photos/500/500`} amLoaded={this.children_loaded} />,
-        <Card radius={this.state.radius} theta={(Math.PI / 4) * 7} center={center_of_wheel} key={`card_${7}`} pic={`https://picsum.photos/500/500`} amLoaded={this.children_loaded} />
+        <Card radius={this.state.radius} theta={(Math.PI / 4) * 0} center={center_of_wheel} key={`card_${0}`} pic={images.mySQL} amLoaded={this.children_loaded} />,
+        <Card radius={this.state.radius} theta={(Math.PI / 4) * 1} center={center_of_wheel} key={`card_${1}`} pic={images.sinatra} amLoaded={this.children_loaded} />,
+        <Card radius={this.state.radius} theta={(Math.PI / 4) * 2} center={center_of_wheel} key={`card_${2}`} pic={images.ruby} amLoaded={this.children_loaded} />,
+        <Card radius={this.state.radius} theta={(Math.PI / 4) * 3} center={center_of_wheel} key={`card_${3}`} pic={images.node} amLoaded={this.children_loaded} />,
+        <Card radius={this.state.radius} theta={(Math.PI / 4) * 4} center={center_of_wheel} key={`card_${4}`} pic={images.bootstrap} amLoaded={this.children_loaded} />,
+        <Card radius={this.state.radius} theta={(Math.PI / 4) * 5} center={center_of_wheel} key={`card_${5}`} pic={images.javascript} amLoaded={this.children_loaded} />,
+        <Card radius={this.state.radius} theta={(Math.PI / 4) * 6} center={center_of_wheel} key={`card_${6}`} pic={images.css} amLoaded={this.children_loaded} />,
+        <Card radius={this.state.radius} theta={(Math.PI / 4) * 7} center={center_of_wheel} key={`card_${7}`} pic={images.HTML5} amLoaded={this.children_loaded} />,
+
       ];
 
         // for (let i = 0; i < 8; i++) {
@@ -143,9 +144,12 @@ class Wheel extends React.Component {
         }
 
         // rotate wheel towards snap point
-        this.wheel.style.transitionDelay = '0.1s';
-        this.wheel.style.transitionDuration = '1.0s';
-        this.wheel.style.transform = `translate(-50%, -50%) rotate(${this.state.theta + theta_between}deg)`;
+        // this.wheel.style.transitionDelay = '0.1s';
+        // this.wheel.style.transitionDuration = '1.0s';
+        // this.wheel.style.transform = `translate(-50%, -50%) rotate(${this.state.theta + theta_between}deg)`;
+        // this.wheel.style.backgroundColor = 'pink'
+        
+        // transform = `translate(-50%, -50%) rotate(${this.state.theta + theta_between}deg)`;
 
         // rotate the cards in the opposite direction of the wheel to maintain equilibrium
         for (let i = 0; i < this.wheel.children.length; i++) {
@@ -161,6 +165,8 @@ class Wheel extends React.Component {
             }
         }
 
+
+
         setTimeout(() => {
             this.setState(prevState => {
                 return {
@@ -173,7 +179,7 @@ class Wheel extends React.Component {
 
     render() {
         return (
-            <div onWheel={this.handle_scroll} ref={ref_id => this.wheel = ref_id} style={styles.wheel}>
+            <div className="Wheel" onWheel={this.handle_scroll} ref={ref_id => this.wheel = ref_id} style={styles.wheel}>
                 {this.state.cards}
             </div>
         )
@@ -185,15 +191,18 @@ const styles = {
     wheel: {
         margin: '0',
         padding: '0',
-        height: '100px',
-        width: '100px',
+        height: '200px',
+        width: '200px',
         borderRadius: '50%',
         position: 'absolute',
-        top: '50%',
+        top: '60%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        backgroundColor: 'red',
-        // backgroundImage: '../images/profilepic.png'
+        // backgroundColor: 'red',
+        // backgroundImage: '(../images/profilepic.png)',
+        // "../images/profilepic.png'
+        // backgroundImage: "url('../images/profilepic.png')",
+        // backgroundSize: 'cover',
     }
 }
 
