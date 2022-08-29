@@ -2,7 +2,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 import React, { useState } from 'react';
 import TicTacToe from './TicTacToe';
-import Mastermind from './testfolder/Mastermind';
+// import Mastermind from './testfolder/Mastermind';
 
 
 import '../../App.css';
@@ -80,9 +80,9 @@ function Games() {
         setDisplay(<TicTacToe selectedGame={selectedGame} />)
         break
 
-      case 'Mastermind':
-        setDisplay(<Mastermind selectedGame={selectedGame} />)
-        break
+      // case 'Mastermind':
+      //   setDisplay(<Mastermind selectedGame={selectedGame} />)
+      //   break
       
     //   case 'Calculator':
     //     setDisplay(<CalculatorDisplay selectedGame={selectedGame} />)
