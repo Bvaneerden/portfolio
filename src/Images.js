@@ -35,47 +35,47 @@ const images = {
       image: HTML5
     },
     {
-      title: "css",
+      title: "CSS",
       image: css
     },
     {
-      title: "javascript",
+      title: "JavaScript",
       image: javascript
     },
     {
-      title: "bootstrap",
+      title: "Bootstrap",
       image: bootstrap
     },
     {
-      title: "node",
+      title: "Node",
       image: node
     },
     {
-      title: "ruby",
+      title: "Ruby",
       image: ruby
     },
     {
-      title: "sinatra",
+      title: "Sinatra",
       image: sinatra
     },
     {
-      title: "mySQL",
+      title: "MySQL",
       image: mySQL
     },
     {
-      title: "postgresql",
+      title: "Postgresql",
       image: postgresql
     },
     {
-      title: "react",
+      title: "React",
       image: react
     },
     {
-      title: "github",
+      title: "Github",
       image: github
     },
     {
-      title: "heroku",
+      title: "Heroku",
       image: heroku
     }],
     skillsYetToAdd: [

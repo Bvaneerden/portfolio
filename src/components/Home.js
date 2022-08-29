@@ -1,6 +1,6 @@
 import { images, imageNames } from '../Images'
 import '../Public/spinner.css';
-import Wheel from './Wheel.js';
+// import Wheel from './tools/TestingFolder/Wheel.js';
 
 function Home() {
   return (

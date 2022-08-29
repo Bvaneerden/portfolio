@@ -19,6 +19,7 @@ function NavbarRender () {
       <Nav.Link href="/AboutMe">About Me</Nav.Link>
       <Nav.Link href='/Skills'>Skills</Nav.Link>
       <Nav.Link href="/Tools">Tools</Nav.Link>
+      <Nav.Link href="/Games">Games</Nav.Link>
 
       {/* <Nav.Link href='/Projects'>Projects</Nav.Link> */}
       <NavDropdown id="collasible-nav-dropdown" title='Projects'>

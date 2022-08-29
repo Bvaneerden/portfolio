@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import React, { useState } from 'react';
 import DisplayOneInput from './DisplayOneInput/DisplayOneInput';
 import DisplayOneInputOneVar from './TestingFolder/DisplayOneInputOneVar';
+import CalculatorDisplay from './TestingFolder/CalculatorDisplay';
 
 import '../../App.css';
 
@@ -20,7 +21,9 @@ function Tools() {
     'Vowel Counter',
     // 'Find A Letter',
     'Reverse Words',
-    'Reverse Letters'
+    'Reverse Letters',
+    'Calculator'
+    
     ]
 
   const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
@@ -96,6 +99,10 @@ function Tools() {
 
       case 'FindALetter':
         setDisplay(<DisplayOneInputOneVar selectedTool={selectedTool} />)
+        break
+      
+      case 'Calculator':
+        setDisplay(<CalculatorDisplay selectedTool={selectedTool} />)
         break
 
       default:
