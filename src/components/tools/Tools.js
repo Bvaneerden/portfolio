@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import React, { useState } from 'react';
 import DisplayOneInput from './DisplayOneInput/DisplayOneInput';
 // import DisplayOneInputOneVar from './TestingFolder/DisplayOneInputOneVar';
-import CalculatorDisplay from './TestingFolder/CalculatorDisplay';
+// import CalculatorDisplay from './TestingFolder/CalculatorDisplay';
 import RubberDuck from './RubberDuckComponents/RubberDuck';
 
 
@@ -24,7 +24,7 @@ function Tools() {
     // 'Find A Letter',
     'Reverse Words',
     'Reverse Letters',
-    'Calculator',
+    // 'Calculator',
     'Rubber Duck'    
     ]
 
@@ -103,9 +103,9 @@ function Tools() {
       //   setDisplay(<DisplayOneInputOneVar selectedTool={selectedTool} />)
       //   break
       
-      case 'Calculator':
-        setDisplay(<CalculatorDisplay selectedTool={selectedTool} />)
-        break
+      // case 'Calculator':
+      //   setDisplay(<CalculatorDisplay selectedTool={selectedTool} />)
+      //   break
 
       case 'Rubber Duck':
         setDisplay(<RubberDuck selectedTool={selectedTool} />)
