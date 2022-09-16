@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import DisplayOneInput from './DisplayOneInput/DisplayOneInput';
 // import DisplayOneInputOneVar from './TestingFolder/DisplayOneInputOneVar';
 import CalculatorDisplay from './TestingFolder/CalculatorDisplay';
-import RubberDuck from './TestingFolder/RubberDuck';
+import RubberDuck from './RubberDuckComponents/RubberDuck';
 
 
 import '../../App.css';

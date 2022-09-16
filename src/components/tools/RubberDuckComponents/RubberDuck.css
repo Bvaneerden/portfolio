@@ -1,0 +1,98 @@
+/* .rdChatWindow{}
+.rdChatHeader{}
+.rdChatBody{} */
+
+.RubberDuckPage{
+  padding: 15px;
+  margin: 0 auto;
+}
+
+/* repeat */
+.react-chatbot-kit-chat-container {
+  background-repeat: no-repeat;
+  width: 75vw !important;
+  margin: 0 auto;
+}
+
+.react-chatbot-kit-chat-inner-container {
+}
+
+.react-chatbot-kit-chat-header {
+}
+
+.react-chatbot-kit-chat-input-container {
+}
+
+.react-chatbot-kit-chat-message-container {
+  
+}
+
+.react-chatbot-kit-chat-input {
+}
+
+.react-chatbot-kit-chat-input-form {
+}
+
+.react-chatbot-kit-chat-input::placeholder {
+}
+
+.react-chatbot-kit-chat-btn-send {
+}
+
+.react-chatbot-kit-chat-btn-send-icon {
+}
+
+.react-chatbot-kit-chat-bot-message-container {
+}
+
+.react-chatbot-kit-chat-bot-avatar-container {
+
+}
+
+.BotAvatarImg{
+  max-height: 60px;
+
+}
+
+.react-chatbot-kit-chat-bot-avatar-icon {
+  /* background-image: '/Users/bree/Documents/sei/Outcomes/portfolio/portfolio/src/images/duck 1.jpeg'; */
+}
+
+.react-chatbot-kit-chat-bot-avatar-letter {
+  
+  
+}
+
+.react-chatbot-kit-chat-bot-message {
+  width: 63vw !important;
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+}
+
+.react-chatbot-kit-chat-bot-loading-icon-container {
+}
+
+.chatbot-loader-container {
+}
+
+#chatbot-loader #chatbot-loader-dot1 {
+}
+
+#chatbot-loader #chatbot-loader-dot2 {
+}
+
+#chatbot-loader #chatbot-loader-dot3 {
+}
+
+.react-chatbot-kit-error {
+}
+
+.react-chatbot-kit-error-container {
+}
+
+.react-chatbot-kit-error-header {
+}
+
+.react-chatbot-kit-error-docs {
+}
