@@ -1,9 +1,12 @@
 .tttGame {
+  
   text-align: center;
-  margin-top: 20px;
+  align-self: center;
+  margin: 20px auto;
   /* background-color: rgb(235, 226, 245); */
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: 90%; */
+  max-width: 90%;
 }
 .tttbackground2 {
   background-image: url("https://media4.giphy.com/media/3o7WTqRKlVRj0wsYQo/giphy.gif?cid=ecf05e475o9goo8i63ltmgqkm0de9joeyo1nost2d8mlhu6c&rid=giphy.gif&ct=g");
@@ -18,7 +21,7 @@
   opacity: 1;
   width: fit-content;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
    
 }
 .tttH1 {
@@ -30,17 +33,18 @@
 
 }
 .tttmiddle {
+  /* width: 100%; */
   display: flex;
-  /* justify-content: center; */
-  margin: 20px 20px 0 20px;
+  justify-content: space-around;
+  margin: 15px 15px 0 15px;
 }
 .tttside1, .tttside2 {
-  padding: 50px;
+  padding: 15px;
   font-size: 50px;
 }
 .tttgameBoard {
-  height: fit-content;
-  width: fit-content;
+  max-height: fit-content;
+  max-width: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -51,10 +55,13 @@
   border: 5px solid black;
   height: 100px;
   width: 100px;
+  max-height: 100px;
+  max-width: 100px;
   font-size: 90px;
   background-color: rgb(186, 245, 225);
   line-height: 1
 }
+
 .tttmessageBoard {
   font-size: 50px;
 }
@@ -63,7 +70,8 @@
   border: 5px solid black;
   height: 100px;
   width: 100px;
-  font-size: 90px;
+  max-height: 100%;
+  max-width: 100%;
   background-color: rgb(186, 245, 225);
   line-height: 1;
 }

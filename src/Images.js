@@ -24,6 +24,8 @@ import heroku from './images/heroku.png'
 import JobsTrackerApp from './images/JobsTrackerApp.png'
 import TicTacToe from './images/TicTacToe.png'
 import CodingResources from './images/CodingResources.png'
+import RubberDuck from './images/duck 1.jpeg'
+import RubberDuckNoBackground from './images/duck_1-removebg.png'
 
 
 
@@ -138,6 +140,14 @@ const images = {
       {
         title: "profilepic",
         image: profilepic
+      },
+      {
+        title: "RubberDuck",
+        image: RubberDuck
+      },
+      {
+        title: "RubberDuckNoBackground",
+        image: RubberDuckNoBackground
       },
     ]
 

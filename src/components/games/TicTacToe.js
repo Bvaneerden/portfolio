@@ -98,11 +98,10 @@ function TicTacToe() {
         } else if (mark === player2Mark) {
           setPlayer2Score(player2Score + 1)
         }
+      } else if (turnNumber === 9) {
+        setMessageBoard(`Draw`)
+        setGameActive(false)
       }
-    }
-    if (turnNumber === 9) {
-      setMessageBoard(`Draw`)
-      setGameActive(false)
     }
   }
 
