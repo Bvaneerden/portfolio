@@ -636,7 +636,7 @@ ElizaBot.prototype.reset = function() {
 	for (var k=0; k<elizaKeywords.length; k++) {
 		this.lastchoice[k]=[];
 		var rules=elizaKeywords[k][2];
-		for (var i=0; i<rules.length; i++) this.lastchoice[k][i]=-1;
+		for (var i = 0; i < rules.length; i++) this.lastchoice[k][i]=-1;
 	}
 }
 
@@ -644,15 +644,15 @@ ElizaBot.prototype._dataParsed = false;
 
 ElizaBot.prototype._init = function() {
 	// install ref to global object
-	var global=ElizaBot.prototype.global;
+	// var global=ElizaBot.prototype.global;
 	// parse data and convert it from canonical form to internal use
 	// prodoce synonym list
 	var synPatterns={};
-	if ((elizaSynons) && (typeof elizaSynons == 'object')) {
+	if ((elizaSynons) && (typeof elizaSynons === 'object')) {
 		for (var i in elizaSynons) synPatterns[i]='('+i+'|'+elizaSynons[i].join('|')+')';
 	}
 	// check for keywords or install empty structure to prevent any errors
-	if ((!elizaKeywords) || (typeof elizaKeywords.length == 'undefined')) {
+	if ((!elizaKeywords) || (typeof elizaKeywords.length === 'undefined')) {
 		elizaKeywords=[['###',0,[['###',[]]]]];
 	}
 	// 1st convert rules to regexps
@@ -666,12 +666,13 @@ ElizaBot.prototype._init = function() {
 	for (var k=0; k<elizaKeywords.length; k++) {
 		var rules=elizaKeywords[k][2];
 		elizaKeywords[k][3]=k; // save original index for sorting
-		for (var i=0; i<rules.length; i++) {
+    // eslint-disable-next-line
+		for (var i = 0; i < rules.length; i++) {
 			var r=rules[i];
 			// check mem flag and store it as decomp's element 2
-			if (r[0].charAt(0)=='$') {
+			if (r[0].charAt(0)==='$') {
 				var ofs=1;
-				while (r[0].charAt[ofs]==' ') ofs++;
+				while (r[0].charAt[ofs]===' ') ofs++;
 				r[0]=r[0].substring(ofs);
 				r[2]=true;
 			}
@@ -696,9 +697,9 @@ ElizaBot.prototype._init = function() {
 					var rp=r[0];
 					while (m) {
 						lp+=rp.substring(0,m.index+1);
-						if (m[1]!=')') lp+='\\b';
+						if (m[1]!==')') lp+='\\b';
 						lp+='\\s*(.*)\\s*';
-						if ((m[2]!='(') && (m[2]!='\\')) lp+='\\b';
+						if ((m[2]!=='(') && (m[2]!=='\\')) lp+='\\b';
 						lp+=m[2];
 						rp=rp.substring(m.index+m[0].length);
 						m=are.exec(rp);
@@ -707,14 +708,16 @@ ElizaBot.prototype._init = function() {
 				}
 				m=are1.exec(r[0]);
 				if (m) {
+          // eslint-disable-next-line
 					var lp='\\s*(.*)\\s*';
-					if ((m[1]!=')') && (m[1]!='\\')) lp+='\\b';
+					if ((m[1]!==')') && (m[1]!=='\\')) lp+='\\b';
 					r[0]=lp+r[0].substring(m.index-1+m[0].length);
 				}
 				m=are2.exec(r[0]);
 				if (m) {
+          // eslint-disable-next-line
 					var lp=r[0].substring(0,m.index+1);
-					if (m[1]!='(') lp+='\\b';
+					if (m[1]!=='(') lp+='\\b';
 					r[0]=lp+'\\s*(.*)\\s*';
 				}
 			}
@@ -729,7 +732,9 @@ ElizaBot.prototype._init = function() {
 	ElizaBot.prototype.pres={};
 	ElizaBot.prototype.posts={};
 	if ((elizaPres) && (elizaPres.length)) {
-		var a=new Array();
+    // eslint-disable-next-line
+		var a = new Array();
+    // eslint-disable-next-line
 		for (var i=0; i<elizaPres.length; i+=2) {
 			a.push(elizaPres[i]);
 			ElizaBot.prototype.pres[elizaPres[i]]=elizaPres[i+1];
@@ -742,7 +747,9 @@ ElizaBot.prototype._init = function() {
 		ElizaBot.prototype.pres['####']='####';
 	}
 	if ((elizaPosts) && (elizaPosts.length)) {
+    // eslint-disable-next-line
 		var a=new Array();
+    // eslint-disable-next-line
 		for (var i=0; i<elizaPosts.length; i+=2) {
 			a.push(elizaPosts[i]);
 			ElizaBot.prototype.posts[elizaPosts[i]]=elizaPosts[i+1];
@@ -755,7 +762,7 @@ ElizaBot.prototype._init = function() {
 		ElizaBot.prototype.posts['####']='####';
 	}
 	// check for elizaQuits and install default if missing
-	if ((!elizaQuits) || (typeof elizaQuits.length == 'undefined')) {
+	if ((!elizaQuits) || (typeof elizaQuits.length === 'undefined')) {
 		elizaQuits=[];
 	}
 	// done
@@ -779,17 +786,17 @@ ElizaBot.prototype.transform = function(text) {
 	text=text.toLowerCase();
 	text=text.replace(/@#\$%\^&\*\(\)_\+=~`\{\[\}\]\|:;<>\/\\\t/g, ' ');
 	text=text.replace(/\s+-+\s+/g, '.');
-	text=text.replace(/\s*[,\.\?!;]+\s*/g, '.');
+	text=text.replace(/\s*[,!;]+\s*/g, '.');
 	text=text.replace(/\s*\bbut\b\s*/g, '.');
 	text=text.replace(/\s{2,}/g, ' ');
 	// split text in part sentences and loop through them
 	var parts=text.split('.');
 	for (var i=0; i<parts.length; i++) {
 		var part=parts[i];
-		if (part!='') {
+		if (part!=='') {
 			// check for quit expression
 			for (var q=0; q<elizaQuits.length; q++) {
-				if (elizaQuits[q]==part) {
+				if (elizaQuits[q]===part) {
 					this.quit=true;
 					return this.getFinal();
 				}
@@ -812,20 +819,21 @@ ElizaBot.prototype.transform = function(text) {
 				if (part.search(new RegExp('\\b'+elizaKeywords[k][0]+'\\b', 'i'))>=0) {
 					rpl = this._execRule(k);
 				}
-				if (rpl!='') return rpl;
+				if (rpl!=='') return rpl;
 			}
 		}
 	}
 	// nothing matched try mem
 	rpl=this._memGet();
 	// if nothing in mem, so try xnone
-	if (rpl=='') {
+	if (rpl==='') {
 		this.sentence=' ';
+    // eslint-disable-next-line
 		var k=this._getRuleIndexByKey('xnone');
 		if (k>=0) rpl=this._execRule(k);
 	}
 	// return reply or default string
-	return (rpl!='')? rpl : 'I am at a loss for words.';
+	return (rpl!=='')? rpl : 'I am at a loss for words.';
 }
 
 ElizaBot.prototype._execRule = function(k) {
@@ -834,11 +842,11 @@ ElizaBot.prototype._execRule = function(k) {
 	var paramre=/\(([0-9]+)\)/;
 	for (var i=0; i<decomps.length; i++) {
 		var m=this.sentence.match(decomps[i][0]);
-		if (m!=null) {
+		if (m!==null) {
 			var reasmbs=decomps[i][1];
 			var memflag=decomps[i][2];
 			var ri= (this.noRandom)? 0 : Math.floor(Math.random()*reasmbs.length);
-			if (((this.noRandom) && (this.lastchoice[k][i]>ri)) || (this.lastchoice[k][i]==ri)) {
+			if (((this.noRandom) && (this.lastchoice[k][i]>ri)) || (this.lastchoice[k][i]===ri)) {
 				ri= ++this.lastchoice[k][i];
 				if (ri>=reasmbs.length) {
 					ri=0;
@@ -854,7 +862,7 @@ ElizaBot.prototype._execRule = function(k) {
 				'\ndecomp: '+decomps[i][0]+
 				'\nreasmb: '+rpl+
 				'\nmemflag: '+memflag);
-			if (rpl.search('^goto ', 'i')==0) {
+			if (rpl.search('^goto ', 'i')===0) {
 				[k][i]=this._getRuleIndexByKey(rpl.substring(5));
 				if ([k][i]>=0) return this._execRule([k][i]);
 			}
@@ -912,7 +920,7 @@ ElizaBot.prototype._postTransform = function(s) {
 
 ElizaBot.prototype._getRuleIndexByKey = function(key) {
 	for (var k=0; k<elizaKeywords.length; k++) {
-		if (elizaKeywords[k][0]==key) return k;
+		if (elizaKeywords[k][0]===key) return k;
 	}
 	return -1;
 }
@@ -948,14 +956,16 @@ ElizaBot.prototype.getInitial = function() {
 
 
 // fix array.prototype methods (push, shift) if not implemented (MSIE fix)
-if (typeof Array.prototype.push == 'undefined') {
+if (typeof Array.prototype.push === 'undefined') {
+  // eslint-disable-next-line
 	Array.prototype.push=function(v) { return this[this.length]=v; };
 }
-if (typeof Array.prototype.shift == 'undefined') {
+if (typeof Array.prototype.shift === 'undefined') {
+  // eslint-disable-next-line
 	Array.prototype.shift=function() {
-		if (this.length==0) return null;
+		if (this.length===0) return null;
 		var e0=this[0];
-		for (var i=1; i<this.length; i++) this[i-1]=this[i];
+		for (var i = 1; i < this.length; i++) this[i-1]=this[i];
 		this.length--;
 		return e0;
 	};
@@ -963,9 +973,9 @@ if (typeof Array.prototype.shift == 'undefined') {
 
 
     var eliza = new ElizaBot();
-    var initial = eliza.getInitial();
+    // var initial = eliza.getInitial();
     var reply = eliza.transform(text);
-    var final = eliza.getFinal();
+    // var final = eliza.getFinal();
 
 var response = reply
 // text.length

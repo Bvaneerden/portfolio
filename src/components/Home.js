@@ -1,4 +1,4 @@
-import { images, imageNames } from '../Images'
+import { images } from '../Images'
 import '../Public/spinner.css';
 // import Wheel from './tools/TestingFolder/Wheel.js';
 

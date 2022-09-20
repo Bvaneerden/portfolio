@@ -1,13 +1,13 @@
 // in config.js
 import { createChatBotMessage } from 'react-chatbot-kit';
-import { images } from '../../../Images'
+// import { images } from '../../../Images'
 
 import RubberDuckIcon from './RubberDuckIcon'
-import MyCustomChatMessage from './RubberDuckIcon'
+// import MyCustomChatMessage from './RubberDuckIcon'
 
 
 const botName = 'a Rubber Duck';
-const duckAvatar = <img src={images.other[10].image} alt="" />
+// const duckAvatar = <img src={images.other[10].image} alt="" />
 
 const config = {
   initialMessages: [createChatBotMessage(`Quack! I'm ${botName}, Please talk to me about all your issues`)],

@@ -1,7 +1,11 @@
+// https://fredrikoseberg.github.io/react-chatbot-kit-docs/
+// Copyright © 2022 react-chatbot-kit, Inc. Built with Docusaurus.
+// https://www.masswerk.at/elizabot/
+
 import { useState } from "react";
 import React from "react";
 import Chatbot from "react-chatbot-kit";
-import { images } from '../../../Images'
+// import { images } from '../../../Images'
 
 import './RubberDuck.css';
 
@@ -12,6 +16,7 @@ import 'react-chatbot-kit/build/main.css'
 
 
 function App() {
+  // eslint-disable-next-line
 const [showBot, toggleBot] = useState(true);
 
 const saveMessages = (messages, HTMLString) => {

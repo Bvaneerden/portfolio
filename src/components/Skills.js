@@ -1,4 +1,4 @@
-import { images, imageNames } from '../Images'
+import { images } from '../Images'
 // import Wheel from './tools/TestingFolder/Wheel'
 
 function Skills() {
@@ -20,7 +20,7 @@ function Skills() {
 
       {images.skills.map((skill, i) =>
       <div className="skillsBoxItem" key={i}>
-      <img key={i} className="skills cant_touch_this" src={skill.image} onMouseOver={cantTouchThis} />
+      <img key={i} className="skills cant_touch_this" src={skill.image} onMouseOver={cantTouchThis} alt={skill.title}/>
       <p className="skillsName">{skill.title}</p>
       </div>
           )}

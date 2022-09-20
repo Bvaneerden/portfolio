@@ -2,17 +2,17 @@ import { useState } from "react";
 import './tictactoe.css';
 
 function TicTacToe() {
-  const [gameboardsize, setGameboardsize] = useState(3)
+  // const [gameboardsize, setGameboardsize] = useState(3)
   const [answer, setAnswer] = useState(['', '', '', '', '', '', '', '', ''])
   const [resetBtnText, setResetBtnText] = useState('Reset')
   const [player1Score, setPlayer1Score] = useState(0)
   const [player2Score, setPlayer2Score] = useState(0)
   const [player1Name, setPlayer1Name] = useState("Player 1")
   const [player2Name, setPlayer2Name] = useState('Player 2')
-  const [player1Mark, setPlayer1Mark] = useState('X')
-  const [player2Mark, setPlayer2Mark] = useState('O')
-  const [player1Image, setPlayer1Image] = useState("https://media4.giphy.com/media/3o7WTqRKlVRj0wsYQo/giphy.gif?cid=ecf05e475o9goo8i63ltmgqkm0de9joeyo1nost2d8mlhu6c&rid=giphy.gif&ct=g")
-  const [player2Image, setPlayer2Image] = useState("https://media3.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif?cid=790b7611f7d6f1d8b24b92cbf17ad6945c454e19c22b887d&rid=giphy.gif&ct=g")
+  const [player1Mark ] = useState('X')
+  const [player2Mark ] = useState('O')
+  const [player1Image] = useState("https://media4.giphy.com/media/3o7WTqRKlVRj0wsYQo/giphy.gif?cid=ecf05e475o9goo8i63ltmgqkm0de9joeyo1nost2d8mlhu6c&rid=giphy.gif&ct=g")
+  const [player2Image] = useState("https://media3.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif?cid=790b7611f7d6f1d8b24b92cbf17ad6945c454e19c22b887d&rid=giphy.gif&ct=g")
   const [turnNumber, setTurnNumber] = useState(1)
   const [messageBoard, setMessageBoard] = useState('Welcome to Tic Tac Toe')
   const [gameActive, setGameActive] = useState(true)

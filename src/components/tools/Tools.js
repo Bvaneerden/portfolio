@@ -28,19 +28,19 @@ function Tools() {
     'Rubber Duck'    
     ]
 
-  const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
-    <a
-      href=""
-      ref={ref}
-      onClick={(e) => {
-        e.preventDefault();
-        onClick(e);
-      }}
-    >
-      {children}
-      &#x25bc;
-    </a>
-  ));
+  // const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
+  //   <a
+  //     href=""
+  //     ref={ref}
+  //     onClick={(e) => {
+  //       e.preventDefault();
+  //       onClick(e);
+  //     }}
+  //   >
+  //     {children}
+  //     &#x25bc;
+  //   </a>
+  // ));
 
   const CustomMenu = React.forwardRef(
     ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
