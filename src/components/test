@@ -1,0 +1,16 @@
+import React from 'react';
+import { Document, Page, pdfjs } from "react-pdf";
+
+import samplePDF from './Bree_Van_Eerden_PDF_2022.pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
+
+
+export default function Test() {
+  return (
+    <Document file={samplePDF}>
+      <Page pageNumber={1} />
+    </Document>
+  );
+}

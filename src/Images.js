@@ -26,6 +26,7 @@ import TicTacToe from './images/TicTacToe.png'
 import CodingResources from './images/CodingResources.png'
 import RubberDuck from './images/duck 1.jpeg'
 import RubberDuckNoBackground from './images/duck_1-removebg.png'
+// import Resume from './images/Bree_Van_Eerden_PDF_2022.pdf'
 
 
 
@@ -149,6 +150,10 @@ const images = {
         title: "RubberDuckNoBackground",
         image: RubberDuckNoBackground
       },
+      // {
+      //   title: "Resume",
+      //   image: Resume
+      // },
     ]
 
 }

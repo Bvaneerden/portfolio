@@ -151,3 +151,8 @@ body {
   /* image-orientation: fixed !important;
   transform: translate(-50%, -50%) rotate(0) !important; */
 /* } */
+
+.react-pdf__Page__canvas {
+
+  margin: 0 auto;
+}

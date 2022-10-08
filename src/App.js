@@ -7,6 +7,7 @@ import Tools from './components/tools/Tools'
 import Games from './components/games/Games'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
+import Resume from './components/Resume'
 import Contact from './components/Contact'
 import './Public/spinner.css';
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/Tools" element={<Tools />} />
           <Route path="/Games" element={<Games />} />
           <Route path="/Projects" element={<Projects />} />
+          <Route path="/Resume" element={<Resume />} />
           <Route path="/Contact" element={<Contact />} />
 
         </Routes>
