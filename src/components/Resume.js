@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Document, Page,pdfjs } from 'react-pdf';
 
-import url from './Bree_Van_Eerden_PDF_2022.pdf';
+import url from './PDF/Bree_Van_Eerden_PDF_2022.pdf';
   
 export default function Resume() {
       
