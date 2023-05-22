@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Document, Page,pdfjs } from 'react-pdf';
+import { images } from '../Images'
 
 import url from './PDF/Bree_Van_Eerden_PDF_2022.pdf';
   
@@ -19,12 +20,15 @@ export default function Resume() {
       <h1>Resume</h1>
       
       <div className="resume">
-        <Document
+
+        <img src={images.other[11].image} alt="" />
+
+        {/* <Document
           file={url}
           onLoadSuccess={onDocumentLoadSuccess}
           >
           <Page pageNumber={pageNumber} />
-        </Document>
+        </Document> */}
       </div>
     </div>
   );

@@ -22,11 +22,14 @@ function NavbarRender () {
       <Nav.Link href="/Games">Games</Nav.Link>
       
 
-      {/* <Nav.Link href='/Projects'>Projects</Nav.Link> */}
+      {/* <Nav.Link href='/projects/Projects'>Projects</Nav.Link> */}
       <NavDropdown id="collasible-nav-dropdown" title='Projects'>
-      <NavDropdown.Item href="https://jobs-app-tracker.herokuapp.com/" target="_blank">Job Tracker App</NavDropdown.Item>
-        <NavDropdown.Item href="https://coding-resources-sei53.herokuapp.com/" target="_blank">Coding Resources</NavDropdown.Item>
+      <NavDropdown.Item href="http://auslan-practise.surge.sh/" target="_blank">Auslan Practise App</NavDropdown.Item>
+      <NavDropdown.Item href="/RubberDuck" target="_blank">Rubber Duck Chatbot</NavDropdown.Item>
+      {/* <NavDropdown.Item href="https://jobs-app-tracker.herokuapp.com/" target="_blank">Job Tracker App</NavDropdown.Item> */}
+        {/* <NavDropdown.Item href="https://coding-resources-sei53.herokuapp.com/" target="_blank">Coding Resources</NavDropdown.Item> */}
         <NavDropdown.Item href="https://bvaneerden.github.io/TicTacToe/" target="_blank">Tic Tac Toe</NavDropdown.Item>
+        <NavDropdown.Item href='/projects/Projects' target="_blank">Bootcamp Projects</NavDropdown.Item>
         {/* <NavDropdown.Divider /> */}
         {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
 

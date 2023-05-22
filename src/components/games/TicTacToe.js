@@ -19,7 +19,6 @@ function TicTacToe() {
   const [imagesActive, setImagesActive] = useState(false)
   const [extraClicks, setExtraClicks] = useState(0)
   
-
   const winningConditions = [
     [0,1,2],
     [3,4,5],

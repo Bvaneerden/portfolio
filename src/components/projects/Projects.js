@@ -1,33 +1,38 @@
 import Carousel from 'react-bootstrap/Carousel';
-import { images } from '../Images'
+import { images } from '../../Images'
 
 function Projects() {
 
   return (
     <div>
-      <h1>Projects</h1>
+      <h1>Bootcamp Projects</h1>
 
       <div className='carousel'>
 
       <Carousel fade interval={null} >
       <Carousel.Item>
       <h3>Jobs Tracker App</h3>
+      <h5>SPA designed to collate information for quick reference</h5>
+      <div>Tech stack: HTML, CSS, JavaScript, React, Express</div>
       <div className='carousel-inner'>
         <img
           className="d-block w-100"
           src={images.other[2].image}
           alt="First slide"
         />
+       
         </div>
-        <h3>SPA designed to collate information for quick reference tracking time sensitive information</h3>
-        <p>Tech stack: HTML, CSS, JavaScript, React, Express</p>
+        
+        {/* <p>Tech stack: HTML, CSS, JavaScript, React, Express</p> */}
         <Carousel.Caption>
-          {/* <h3 className='carousel-inner' >Jobs Tracker App</h3>
-          <p className='carousel-inner'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+        {/* <h3>SPA designed to collate information for quick reference tracking time sensitive information</h3> */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <h3>Coding Resources App</h3>
+      <h5>Full stack CRUD app, includes a carousel filter and animations</h5>
+      <div>Tech stack: HTML, CSS, Ruby, Sinatra, JavaScript, Bootstrap</div>
+
       <div className='carousel-inner'>
         <img
           className="d-block w-100"
@@ -35,8 +40,8 @@ function Projects() {
           alt="First slide"
         />
         </div>
-        <h3>Full stack CRUD app for collating resources to assist learning, includes a carousel filter and animations</h3>
-        <p>Tech stack: HTML, CSS, JavaScript, Bootstrap, Ruby</p>
+        
+        
         <Carousel.Caption>
           {/* <h3 className='carousel-inner' >Jobs Tracker App</h3>
           <p className='carousel-inner'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
@@ -44,8 +49,8 @@ function Projects() {
       </Carousel.Item>
       <Carousel.Item>
       <h3>Tic Tac Toe</h3>
-      <h3>Easter egg filled game, can you find them all</h3>
-        <p>Tech stack: HTML, CSS, JavaScript</p>
+      <h5>Easter egg filled game, can you find them all</h5>
+        <div>Tech stack: HTML, CSS, JavaScript</div>
       <div className='carousel-inner'>
         <img
           className="d-block w-100"

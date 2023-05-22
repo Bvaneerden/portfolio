@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import DisplayOneInput from './DisplayOneInput/DisplayOneInput';
 // import DisplayOneInputOneVar from './TestingFolder/DisplayOneInputOneVar';
 // import CalculatorDisplay from './TestingFolder/CalculatorDisplay';
-import RubberDuck from './RubberDuckComponents/RubberDuck';
+// import RubberDuck from './RubberDuckComponents/RubberDuck';
 
 
 import '../../App.css';
@@ -25,7 +25,7 @@ function Tools() {
     'Reverse Words',
     'Reverse Letters',
     // 'Calculator',
-    'Rubber Duck'    
+    // 'Rubber Duck'    
     ]
 
   // const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
@@ -107,9 +107,9 @@ function Tools() {
       //   setDisplay(<CalculatorDisplay selectedTool={selectedTool} />)
       //   break
 
-      case 'Rubber Duck':
-        setDisplay(<RubberDuck selectedTool={selectedTool} />)
-        break
+      // case 'Rubber Duck':
+      //   setDisplay(<RubberDuck selectedTool={selectedTool} />)
+      //   break
 
       default:
         setDisplay("Please Select a Tool")

@@ -13,8 +13,9 @@ import rubydark from './images/ruby_dark.jpeg'
 import ruby_on_rails from './images/ruby-on-rails.png'
 import postgresql from './images/postgresql.png'
 import python from './images/python.png'
+import flask from './images/flask.png'
 import bootstrap from './images/bootstrap-logo.svg'
-import node from './images/node_logo.png'
+import node from './images/node.png'
 import sinatra from './images/sinatra_logo.png'
 import typescript from './images/typescript_logo.png'
 import react from './images/react_logo.png'
@@ -26,9 +27,10 @@ import TicTacToe from './images/TicTacToe.png'
 import CodingResources from './images/CodingResources.png'
 import RubberDuck from './images/duck 1.jpeg'
 import RubberDuckNoBackground from './images/duck_1-removebg.png'
+import Resume from './images/Internet Resume.png'
 // import Resume from './images/Bree_Van_Eerden_PDF_2022.pdf'
 
-
+{/* <img src={images.other[8].image} alt="" /> */}
 
 
 const images = {
@@ -52,6 +54,14 @@ const images = {
     {
       title: "Node",
       image: node
+    },
+    {
+      title: "Python",
+      image: python
+    },
+    {
+      title: "Flask",
+      image: flask
     },
     {
       title: "Ruby",
@@ -150,10 +160,10 @@ const images = {
         title: "RubberDuckNoBackground",
         image: RubberDuckNoBackground
       },
-      // {
-      //   title: "Resume",
-      //   image: Resume
-      // },
+      {
+        title: "Resume",
+        image: Resume
+      },
     ]
 
 }

@@ -2,6 +2,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Form from 'react-bootstrap/Form';
 import React, { useState } from 'react';
 import TicTacToe from './TicTacToe';
+import Minesweeper from './Minesweeper';
 // import Mastermind from './testfolder/Mastermind';
 
 
@@ -13,6 +14,7 @@ function Games() {
   const [display, setDisplay] = useState('Please Select a Game')
   const gameList = [
     'TicTacToe',
+    // 'Minesweeper'
     // 'Mastermind',
     
     ]
@@ -79,6 +81,10 @@ function Games() {
       case 'TicTacToe':
         setDisplay(<TicTacToe selectedGame={selectedGame} />)
         break
+      
+      // case 'Minesweeper':
+      //   setDisplay(<Minesweeper selectedGame={selectedGame} />)
+      //   break
 
       // case 'Mastermind':
       //   setDisplay(<Mastermind selectedGame={selectedGame} />)
